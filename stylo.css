@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+   background: #dfe9f5; 
+}
+
+video{      
+      margin-left: 565px;
+      margin-top: 90px;
+      margin-bottom: -90px; 
+ 
+}
+canvas{
+  display: none;
+}
+.wrapper{
+    width: 350px;
+    height: 400px;
+    justify-content: center;
+    margin: 200px auto;
+    margin-top: -200px;   
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 8px 30px 30px rgb(141, 140, 141);
+}
+.wrapper h1{
+    padding-top: 10px;
+    font-size: 1.8rem;
+    color: #062233;
+    padding-left: 38px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    margin-left: 60px;
+    margin-top: 250px;
+    font-size: 15px;
+}
+button{
+    font-size: 1rem;
+    margin-top: 25px;
+    margin-left: 20px;
+    padding:10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width:90% ;
+    cursor: pointer;
+    color: #fff;
+    background: rgb(15, 59, 94);
+    box-shadow: 0px 11px 30px rgb(108, 109, 129);
+}
+.scan{
+    margin-left: 20px;
+    margin-top: -100px;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column; 
+}
+.scan .qrCode{
+ position: relative;
+ width: 310px;
+ height: 310px;
+ background: url(ui-transformed.png);
+ background-size: 310px;
+}
+.scan .qrCode::before
+{
+   content: ''; 
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: url(ui2-PhotoRoom.png-PhotoRoom.png);  
+   background-size:310px;
+   overflow: hidden;
+   animation: animate 4s ease-in-out  infinite;
+}
+@keyframes animate 
+{
+ 0%,100%
+ {
+ height: calc(100% -20px);
+ }
+ 50%
+ {
+     height: 100%;
+ }
+}
+.scan .qrCode::after
+{
+   content: ''; 
+   position: absolute;
+   inset: 20px;
+   width:calc(100% - 40px);
+   height: 2px;
+   background:rgb(18, 18, 77);  
+   background-size:240px; 
+   filter: drop-shadow(0 0 20px rgb(18, 18, 77) ) drop-shadow(0 0 60px rgb(18, 18, 77) );
+   animation: animateLine 4s ease-in-out infinite;
+}
+@keyframes animateLine
+{
+    0%
+    {
+       top: 20px; 
+    }
+    50%
+    {
+       top: calc(100% - 20px); 
+    }
+}
+@media screen and (max-width: 450px) {
+  .wrapper{
+     width: 240px;
+    height: 300px;
+  } 
+video{      
+      justify-content: center;  
+}
+  .scan{
+    margin-top: -50px;
+    margin-left: 25px;
+  }
+    .wrapper h1{
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+  .scan .qrCode{
+   width: 200px; 
+   height: 200px; 
+   background-size: 200px;
+  }
+  .scan .qrCode::before{
+    background-size:200px;
+  }
+  button{
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 13px;
+  }
+  p{
+    font-size: 0.8rem;
+     margin-top: 180px;
+     margin-left: 20px;
+  }
+}

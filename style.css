@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+   background: #dfe9f5; 
+}
+.wrapper{
+    width: 300px;
+    height: 300px;
+    padding: 2rem 1rem;
+    margin: 200px auto;
+    background-color: #fff;
+    padding-top: -30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 8px 30px 30px rgb(141, 140, 141);
+}
+
+h1{
+    font-size: 2rem;
+    color: #062233;
+    margin-bottom: 1.2rem;
+}
+form input{
+   width:90%; 
+   outline: none;
+   border: 1px solid #fff;
+   padding: 12px 10px;
+   margin-bottom: 10px;
+   border-radius: 20px;
+   background: #e4e4e4;
+
+}
+
+button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding:10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width:90% ;
+    cursor: pointer;
+    color: #fff;
+    background: rgb(15, 59, 94);
+    box-shadow: 0px 11px 30px rgb(108, 109, 129);
+}
+
+input:focus{
+    border: 1px solid rgb(167, 167, 170);
+}
+.terms{
+    margin-top: 0.2rem;
+}
+
+.terms input{
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.terms label{
+font-size: 0.9rem;
+}
+.terms a{
+    font-size: 1.em;
+    color: #2877a8;
+    text-decoration: underline;
+
+} 
+@media screen and (max-width: 450px) {
+  .wrapper{
+     width: 250px;
+    height: 300px;
+  }
+}

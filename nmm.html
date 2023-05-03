@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Hop Bionics</title>
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <h1>Login</h1>
+    <form>
+      <input type="text" id="user-id" placeholder="User-Id">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+    </form>
+    <div class="terms">
+      <label><a href="Untitled-1.html">login using qr-code</a></label>
+    </div>
+    <button id="submit-button">Login</button>
+
+
+  </div>
+
+  <script>
+    // get references to the input fields and the submit button
+    const userIdInput = document.getElementById('user-id');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const submitButton = document.getElementById('submit-button');
+
+    // add an event listener to the submit button
+    submitButton.addEventListener('click', (event) => {
+      // prevent the form from submitting
+      event.preventDefault();
+
+      // get the values entered by the user
+      const userIdValue = userIdInput.value;
+      const usernameValue = usernameInput.value;
+      const passwordValue = passwordInput.value;
+
+      // check if the values match the expected values
+      if (userIdValue === '46w81' && usernameValue === 'kaleb mandefro' && passwordValue === 'incorrect8100') {
+        // redirect to the other HTML file
+        window.location.href = 'connect.html';
+      } else {
+        // display an error message to the user
+        alert('Invalid login credentials. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
